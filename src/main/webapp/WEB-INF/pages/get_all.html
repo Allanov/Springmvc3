@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get All</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Person Id</th>
+        <th>Person Name</th>
+        <th>Person Email</th>
+        <th>Person Age</th>
+    </tr>
+    <tr th:each="student: ${students}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.email}"></td>
+        <td th:text="${student.age}"></td>
+        <td >
+            <a th:href = "@{/student/update/(studentId=${student.id})}">
+                <button>update</button>
+            </a>
+        </td>
+        <td>
+            <a th:href = "@{/student/delete/(studentId=${student.id})}">
+                <button>delete</button>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<form action="#" th:action="@{/student/savepage}" method="get">
+    <p><input type="submit" value="create new student"/></p>
+</form>
+
+
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th scope = "col">Id</th>-->
+<!--        <th scope = "col">Name</th>-->
+<!--        <th scope = "col">Email</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each = "person ${people}">-->
+<!--        <td th:text = "${person.id}"></td>-->
+<!--        <td th:text = "${person.name}"></td>-->
+<!--        <td th:text = "${person.email}"></td>-->
+<!--        <td >-->
+<!--            <a th:href = "@{/update/(personId=${person.id})}">-->
+<!--                <button>update</button>-->
+<!--            </a>-->
+<!--        </td>-->
+<!--        <td >-->
+<!--            <a th:href = "@{/delete/(personId=${person.id})}">-->
+<!--                <button>delete</button>-->
+<!--            </a>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    </tbody>-->
+<!--</table>-->
+<tr>
+<tr>
+<tr>
+    <!--    <input type = "button" balue = "Add company"-->
+    <!--           onclick = "window.location.href = "addPerson">-->
+</body>
+</html>
