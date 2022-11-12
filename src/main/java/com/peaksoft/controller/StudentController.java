@@ -34,6 +34,10 @@ public class StudentController {
         return "get_all";
     }
 
+    public void method() {
+        System.out.println("Hello everyBody!");
+    }
+
     @RequestMapping("/delete")
     public String deleteStudent(@RequestParam("studentId") Long studentId) {
         Student student = studentService.getById(studentId);

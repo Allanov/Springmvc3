@@ -8,7 +8,6 @@
 <div>
     <h1>Form</h1>
     <form action="#" th:action="@{/student/save}" th:object="${student}" method="post">
-        <p>Id: <input type="hidden" th:field="*{id}"/></p>
         <p>Name: <input type="text" th:field="*{name}" placeholder="name"/></p>
         <p>Email: <input type="text" th:field="*{email}" placeholder="email"/></p>
         <p>Age: <input type="text" th:field="*{age}" placeholder="age"/></p>
